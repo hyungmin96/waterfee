@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#121212"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/titleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/currentNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/nanumbarungothic"
+            android:text="2층"
+            android:textColor="#2364B3"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/level"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="@font/nanumbarungothic"
+            android:text="현재 확인 층"
+            android:textColor="#5A5A5A"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="28dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="14dp"
+            android:background="@drawable/undo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/CategoryName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/nanumbarungothic"
+                    android:text="확인하실 방을 선택해주세요."
+                    android:textColor="#2364B3"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints"/>
+
+                <TextView
+                    android:id="@+id/Keyword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nanumbarungothic"
+                    android:textColor="#EA5252"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/CategoryName"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/Page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nanumbarungothic"
+                    android:textColor="#EA5252"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/Keyword"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/ArticleNums"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nanumbarungothic"
+                    android:textColor="#EA5252"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/Page"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="30dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/horizontal_line_24px"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="20dp"
+                    android:elevation="4dp"
+                    app:cardBackgroundColor="#1C1C1C"
+                    app:cardCornerRadius="6dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="38dp"
+                            android:layout_marginTop="16dp"
+                            android:fontFamily="@font/nanumbarungothic"
+                            android:text="202호"
+                            android:textColor="#D6D6D6"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="35dp"
+                            android:fontFamily="@font/nanumbarungothic"
+                            android:text="시간별 사용량"
+                            android:textColor="#7A7A7A"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toStartOf="@+id/textView5"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="30dp"
+                            android:fontFamily="@font/nanumbarungothic"
+                            android:text="누적 사용량"
+                            android:textColor="#7A7A7A"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/usedLevel3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="40dp"
+                            android:fontFamily="@font/nanumbarungothic"
+                            android:text="2.8t"
+                            android:textColor="#A6A6A6"
+                            android:textSize="25dp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView5"
+                            tools:ignore="MissingConstraints" />
+
+                        <TextView
+                            android:id="@+id/usedLevel2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="62dp"
+                            android:fontFamily="@font/nanumbarungothic"
+                            android:text="0.1t"
+                            android:textColor="#A6A6A6"
+                            android:textSize="25dp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toStartOf="@+id/usedLevel3"
+                            app:layout_constraintTop_toBottomOf="@+id/textView4"
+                            tools:ignore="MissingConstraints" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/nanumbarungothic"
+                            android:text="누수 및 안전경고"
+                            android:textColor="#EA5252"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="56dp"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/nanumbarungothic"
+                            android:text="지속적인 물사용으로, 누수의 가능성이 있습니다."
+                            android:textColor="#636363"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <FrameLayout
+                android:layout_marginTop="40dp"
+                android:background="#121212"
+                android:layout_width="match_parent"
+                android:layout_height="320dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/roonNumList"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent" />
+            </FrameLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
